@@ -61,10 +61,10 @@ return redirect('/apartaments')->with('completed', 'Apartament creat!');
     /**
      * Display the specified resource.
      *
-     * @param  int  $id
+     * @param  int  $Codi_unic
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(int $Codi_unic)
     {
         //
     }
@@ -86,7 +86,7 @@ return redirect('/apartaments')->with('completed', 'Apartament creat!');
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
+     * @param  int  $Codi_unic
      * @return \Illuminate\Http\Response
      */
     public function update(Request $request, $Codi_unic)
@@ -106,14 +106,14 @@ return redirect('/apartaments')->with('completed', 'Apartament creat!');
             'Airecondicionat' => 'required|max:1'
         ]);
 
-        Apartaments::whereId($Codi_unic)->update($dades);
+        Apartaments::whereCodi_unic($Codi_unic)->update($dades);
         return redirect('/apartaments')->with('completed', 'Apartament actualitzat');
     }
 
     /**
      * Remove the specified resource from storage.
      *
-     * @param  int  $id
+     * @param  int  $Codi_unic
      * @return \Illuminate\Http\Response
      */
     public function destroy($Codi_unic)

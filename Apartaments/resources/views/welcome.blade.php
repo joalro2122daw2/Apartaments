@@ -2,7 +2,7 @@
 
 @section('content')
 
-    <h1>Aplicació d'administració d'empleats</h1>
+    <h1>Aplicació d'administració d'apartaments</h1>
     <div class="card mt-5">
         <div class="card-header">
             Afegeix un nou apartament

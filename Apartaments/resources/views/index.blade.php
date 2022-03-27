@@ -27,7 +27,7 @@
             </tr>
             </thead>
             <tbody>
-            @foreach($apartaments as $apart)
+            @foreach($apartament as $apart)
                 <tr>
                     <td>{{$apart->Codi_unic}}</td>
                     <td>{{$apart->Referenciacatastral}}</td>

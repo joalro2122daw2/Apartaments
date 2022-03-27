@@ -74,5 +74,5 @@
             </form>
         </div>
     </div>
-    <br><a href="{{ url('apartaments') }}">Accés directe a la Llista d'empleats</a
+    <br><a href="{{ url('apartaments') }}">Accés directe a la Llista d'apartaments</a
 @endsection
