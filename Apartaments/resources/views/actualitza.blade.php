@@ -18,12 +18,12 @@
                     </ul>
                 </div>
             @endif
-            <form method="post" action="{{ route('apartaments.update', $apartament->Codi_unic) }}">
+            <form method="post" action="{{ route('apartaments.update', $apartament->id) }}">
                 <div class="form-group">
                     @csrf
                     @method('PATCH')
-                    <label for="Codi_unic">Codi_unic</label>
-                    <input type="text" class="form-control" name="nom" value="{{ $apartament->Codi_unic }}" />
+                    <label for="id">Id</label>
+                    <input type="text" class="form-control" name="id" value="{{ $apartament->id }}" />
                 </div>
                 <div class="form-group">
                     <label for="Referenciacatastral">Ref catastral</label>

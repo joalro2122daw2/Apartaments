@@ -21,8 +21,8 @@
             <form method="post" action="{{ route('apartaments.store') }}">
                 <div class="form-group">
                     @csrf
-                    <label for="Codi_unic">Codi unic</label>
-                    <input type="text" class="form-control" name="Codi_unic"/>
+                    <label for="id">Id</label>
+                    <input type="text" class="form-control" name="id"/>
                 </div>
                 <div class="form-group">
                     <label for="Referenciacatastral">Referencia catastral</label>

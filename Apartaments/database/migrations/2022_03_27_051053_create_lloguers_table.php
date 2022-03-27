@@ -16,8 +16,8 @@ class CreateLloguersTable extends Migration
         Schema::create('lloguers', function (Blueprint $table) {
             $table->string('Dni');
             $table->foreign('Dni')->references('Dni')->on('clients')->onDelete('cascade')->onUpdate('cascade');
-            $table->string('Codi_unic');
-            $table->foreign('Codi_unic')->references('Codi_unic')->on('apartaments')->onDelete('cascade')->onUpdate('cascade');
+            $table->integer('id');
+            $table->foreign('id')->references('id')->on('apartaments')->onDelete('cascade')->onUpdate('cascade');
             $table->date('Datainici');
             $table->integer('Horainici');
             $table->date('Datafi');
@@ -28,7 +28,7 @@ class CreateLloguersTable extends Migration
             $table->boolean('Diposit');
             $table->integer('Quantdiposit');
             $table->enum('Tipusasseguranca', ['Franquicia_fins_a_1000_Euros', 'Franquicia_fins_500_Euros', 'Sense_franquicia']);
-            $table->primary(['Dni','Codi_unic']);
+            $table->primary(['Dni','id']);
         });
     }
 

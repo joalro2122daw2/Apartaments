@@ -29,7 +29,7 @@
             <tbody>
             @foreach($apartament as $apart)
                 <tr>
-                    <td>{{$apart->Codi_unic}}</td>
+                    <td>{{$apart->id}}</td>
                     <td>{{$apart->Referenciacatastral}}</td>
                     <td>{{$apart->Ciutat}}</td>
                     <td>{{$apart->Barri}}</td>
@@ -42,8 +42,8 @@
                     <td>{{$apart->Calefaccio}}</td>
                     <td>{{$apart->Airecondicionat}}</td>
                     <td class="text-left">
-                        <a href="{{ route('apartaments.edit', $apart->Codi_unic)}}" class="btn btn-success btn-sm">Edita</a>
-                        <form action="{{ route('apartaments.destroy', $apart->Codi_unic)}}" method="post" style="display: inline-block">
+                        <a href="{{ route('apartaments.edit', $apart->id)}}" class="btn btn-success btn-sm">Edita</a>
+                        <form action="{{ route('apartaments.destroy', $apart->id)}}" method="post" style="display: inline-block">
                             @csrf
                             @method('DELETE')
                             <button class="btn btn-danger btn-sm" type="submit">Esborra</button>

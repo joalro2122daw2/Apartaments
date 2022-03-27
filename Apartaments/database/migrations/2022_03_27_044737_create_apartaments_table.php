@@ -14,8 +14,8 @@ class CreateApartamentsTable extends Migration
     public function up()
     {
         Schema::create('apartaments', function (Blueprint $table) {
-            $table->string('Codi_unic');
-            $table->primary('Codi_unic');
+            $table->integer('id');
+            $table->primary('id');
             $table->string('Referenciacatastral');
             $table->string('Ciutat');
             $table->string('Barri');

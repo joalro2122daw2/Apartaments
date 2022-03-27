@@ -9,7 +9,7 @@ class Apartaments extends Model
 {
     use HasFactory;
     protected $fillable = [
-        'Codi_unic',
+        'id',
         'Referenciacatastral',
         'Ciutat',
         'Barri',

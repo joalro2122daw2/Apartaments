@@ -39,7 +39,7 @@ class ControladorApartaments extends Controller
     public function store(Request $request)
     {
         $nouApartament = $request->validate([
-            'Codi_unic' => 'required|max:255',
+            'id' => 'required|max:255',
             'Referenciacatastral' => 'required|max:255',
             'Ciutat' => 'required|max:255',
             'Barri' => 'required|max:255',
@@ -61,10 +61,10 @@ return redirect('/apartaments')->with('completed', 'Apartament creat!');
     /**
      * Display the specified resource.
      *
-     * @param  int  $Codi_unic
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show(int $Codi_unic)
+    public function show(int $id)
     {
         //
     }
@@ -72,12 +72,12 @@ return redirect('/apartaments')->with('completed', 'Apartament creat!');
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  int  $Codi_unic
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($Codi_unic)
+    public function edit($id)
     {
-        $apartament = Apartaments::findOrFail($Codi_unic);
+        $apartament = Apartaments::findOrFail($id);
         return view('actualitza', compact('apartament'));
 
     }
@@ -86,13 +86,13 @@ return redirect('/apartaments')->with('completed', 'Apartament creat!');
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  int  $Codi_unic
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $Codi_unic)
+    public function update(Request $request, $id)
     {
         $dades = $request->validate([
-            'Codi_unic' => 'required|max:255',
+            'id' => 'required|max:255',
             'Referenciacatastral' => 'required|max:255',
             'Ciutat' => 'required|max:255',
             'Barri' => 'required|max:255',
@@ -106,19 +106,19 @@ return redirect('/apartaments')->with('completed', 'Apartament creat!');
             'Airecondicionat' => 'required|max:1'
         ]);
 
-        Apartaments::whereCodi_unic($Codi_unic)->update($dades);
+        Apartaments::whereCodi_unic($id)->update($dades);
         return redirect('/apartaments')->with('completed', 'Apartament actualitzat');
     }
 
     /**
      * Remove the specified resource from storage.
      *
-     * @param  int  $Codi_unic
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($Codi_unic)
+    public function destroy($id)
     {
-        $apartament = Apartaments::findOrFail($Codi_unic);
+        $apartament = Apartaments::findOrFail($id);
         $apartament->delete();
         return redirect('/apartaments')->with('completed', 'Apartament esborrat');
 
