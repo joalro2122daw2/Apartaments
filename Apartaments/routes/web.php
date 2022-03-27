@@ -19,6 +19,10 @@ Route::get('/', function () {
 Route::get('/client', function () {
     return view('welcomeClients');
 });
+Route::get('/lloguer', function () {
+    return view('welcomeLloguers');
+});
 
 Route::resource('apartaments', ControladorApartaments::class);
 Route::resource('clients', ControladorClients::class);
+Route::resource('lloguers', ControladorLloguers::class);
