@@ -14,7 +14,9 @@ class ControladorClients extends Controller
      */
     public function index()
     {
-        //
+        $client = Clients::all();
+        return view('indexClient', compact('client'));
+
     }
 
     /**
@@ -24,7 +26,7 @@ class ControladorClients extends Controller
      */
     public function create()
     {
-        //
+        return view('welcomeClients');
     }
 
     /**
@@ -35,51 +37,86 @@ class ControladorClients extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $nouClient = $request->validate([
+            'id' => 'required|max:11',
+            'Dni' => 'required|max:255',
+            'Nomcognoms' => 'required|max:255',
+            'Edat' => 'required|max:11',
+            'Tel' => 'required|max:11',
+            'Adreca' => 'required|max:255',
+            'Ciutat' => 'required|max:255',
+            'Pis' => 'required|max:255',
+            'Email' => 'required|max:255',
+            'Tipustargeta' => 'required',
+            'Numtargeta' => 'required|max:11',
+        ]);
+        $client = Clients::create($nouClient);
+
+        return redirect('/clients')->with('completed', 'Client creat!');
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  int  $id
+     * @param  int  $dni
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show($dni)
     {
-        //
+       //
+
     }
 
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  int  $id
+     * @param  int  $dni
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit($dni)
     {
-        //
+        $client = Clients::findOrFail($dni);
+        return view('actualitzaClient', compact('client'));
     }
 
     /**
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
+     * @param  int  $dni
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, $dni)
     {
-        //
+        $dades = $request->validate([
+            'id' => 'required|max:11',
+            'Dni' => 'required|max:255',
+            'Nomcognoms' => 'required|max:255',
+            'Edat' => 'required|max:11',
+            'Tel' => 'required|max:11',
+            'Adreca' => 'required|max:255',
+            'Ciutat' => 'required|max:255',
+            'Pis' => 'required|max:255',
+            'Email' => 'required|max:255',
+            'Tipustargeta' => 'required',
+            'Numtargeta' => 'required|max:11',
+        ]);
+        Clients::whereId($dni)->update($dades);
+        return redirect('/clients')->with('completed', 'Client actualitzat');
+
     }
 
     /**
      * Remove the specified resource from storage.
      *
-     * @param  int  $id
+     * @param  int  $dni
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy($dni)
     {
-        //
+        $client = Clients::findOrFail($dni);
+        $client->delete();
+        return redirect('/clients')->with('completed', 'Client esborrat');
+
     }
 }

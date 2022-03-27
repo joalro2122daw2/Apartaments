@@ -16,5 +16,9 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+Route::get('/client', function () {
+    return view('welcomeClients');
+});
 
 Route::resource('apartaments', ControladorApartaments::class);
+Route::resource('clients', ControladorClients::class);
