@@ -22,7 +22,11 @@ Route::get('/client', function () {
 Route::get('/lloguer', function () {
     return view('welcomeLloguers');
 });
+Route::get('/usuari', function () {
+    return view('welcomeUsuaris');
+});
 
 Route::resource('apartaments', ControladorApartaments::class);
 Route::resource('clients', ControladorClients::class);
 Route::resource('lloguers', ControladorLloguers::class);
+Route::resource('usuaris', ControladorUsuaris::class);

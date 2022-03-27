@@ -14,7 +14,8 @@ class ControladorUsuaris extends Controller
      */
     public function index()
     {
-        //
+        $usuari = Usuaris::all();
+        return view('indexUsuaris', compact('usuari'));
     }
 
     /**
@@ -24,7 +25,7 @@ class ControladorUsuaris extends Controller
      */
     public function create()
     {
-        //
+        return view('welcomeUsuaris');
     }
 
     /**
@@ -35,7 +36,17 @@ class ControladorUsuaris extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $nouUsuari = $request->validate([
+            'Nomcognoms' => 'required|max:255',
+            'Email' => 'required|max:255',
+            'Contrasenya' => 'required|max:255',
+            'Tipus' => 'required|max:255',
+            'Horaent' => 'required|max:11',
+            'Horasort' => 'required|max:255',
+        ]);
+        $usuari = Usuaris::create($nouUsuari);
+
+        return redirect('/usuaris')->with('completed', 'Usuari creat!');
     }
 
     /**
@@ -57,7 +68,8 @@ class ControladorUsuaris extends Controller
      */
     public function edit($id)
     {
-        //
+        $usuari = Usuaris::findOrFail($id);
+        return view('actualitzaUsuari', compact('usuari'));
     }
 
     /**
@@ -69,7 +81,17 @@ class ControladorUsuaris extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $dades = $request->validate([
+            'Nomcognoms' => 'required|max:255',
+            'Email' => 'required|max:255',
+            'Contrasenya' => 'required|max:255',
+            'Tipus' => 'required|max:255',
+            'Horaent' => 'required|max:11',
+            'Horasort' => 'required|max:255',
+        ]);
+        Usuaris::whereId($id)->update($dades);
+        return redirect('/usuaris')->with('completed', 'Usuari actualitzat');
+
     }
 
     /**
@@ -80,6 +102,8 @@ class ControladorUsuaris extends Controller
      */
     public function destroy($id)
     {
-        //
+        $usuari = Usuaris::findOrFail($id);
+        $usuari->delete();
+        return redirect('/usuaris')->with('completed', 'Usuari esborrat');
     }
 }
