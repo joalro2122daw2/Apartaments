@@ -55,4 +55,5 @@
         </table>
         <div>
             <br><a href="{{ url('lloguers/create') }}">Accés directe a la vista de creació de lloguers</a>
+            <br><a href="{{ url('/') }}">Accés directe al menú</a>
 @endsection
