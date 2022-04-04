@@ -48,6 +48,7 @@
                             @method('DELETE')
                             <button class="btn btn-danger btn-sm" type="submit">Esborra</button>
                         </form>
+                        <a href="{{ route('apartaments.show', $apart->id)}}" class="btn btn-primary btn-sm">Baixa</a>
                     </td>
                 </tr>
             @endforeach
@@ -55,4 +56,5 @@
         </table>
         <div>
             <br><a href="{{ url('apartaments/create') }}">Accés directe a la vista de creació d'apartaments</a>
+            <br><a href="{{ url('/') }}">Accés directe al menú</a>
 @endsection

@@ -38,6 +38,11 @@
                             @method('DELETE')
                             <button class="btn btn-danger btn-sm" type="submit">Esborra</button>
                         </form>
+                        <form  method="get" style="display: inline-block">
+                            @csrf
+                            @method('POST')
+                            <button class="btn btn-primary btn-sm" type="submit">Baixa</button>
+                        </form>
                     </td>
                 </tr>
             @endforeach
@@ -45,4 +50,5 @@
         </table>
         <div>
             <br><a href="{{ url('usuaris/create') }}">Accés directe a la vista de creació d'usuaris</a>
+            <br><a href="{{ url('/') }}">Accés directe al menú</a>
 @endsection

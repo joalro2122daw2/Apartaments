@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use PDF;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Request;
 use App\Models\Clients;
 
@@ -61,10 +63,11 @@ class ControladorClients extends Controller
      * @param  int  $dni
      * @return \Illuminate\Http\Response
      */
-    public function show($dni)
+    public function show($cli)
     {
-       //
-
+        $client = DB::table('clients')->where('id', $cli)->first();
+        $pdf = PDF::loadView('clientspdf', array('cli' =>$client))->setPaper('a4', 'landscape');
+        return $pdf->download('clients.pdf');
     }
 
     /**
@@ -103,6 +106,7 @@ class ControladorClients extends Controller
         ]);
         Clients::whereId($dni)->update($dades);
         return redirect('/clients')->with('completed', 'Client actualitzat');
+        
 
     }
 
@@ -118,5 +122,24 @@ class ControladorClients extends Controller
         $client->delete();
         return redirect('/clients')->with('completed', 'Client esborrat');
 
+    }
+
+    /**
+     * Remove the specified resource from storage.
+     *
+     * @param  int  $dni
+     * @return \Illuminate\Http\Response
+     */
+    public function pdf($Dni)
+    {
+        $Client = Clients::findOrFail($Dni);
+        if ($Client){
+            $Dni = $Client->$Dni;
+            $pdf = PDF::loadView('clientspdf', compact('Dni'));
+            return $pdf->setPaper('A4', 'landscape')->download('indexClient.pdf');
+        }
+        
+        $pdf = PDF::loadView('clientspdf', compact('Client'));
+        return $pdf->download('indexClient.pdf');
     }
 }

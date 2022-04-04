@@ -7,9 +7,11 @@ use Illuminate\Database\Eloquent\Model;
 
 class Lloguers extends Model
 {
+    public $timestamps = false;
     use HasFactory;
     protected $fillable = [
         'Dni',
+        'id',
         'Codi_unic',
         'Datainici',
         'Horainici',

@@ -43,11 +43,16 @@
                     <td>{{$llog->Tipusasseguranca}}</td>
                     <td class="text-left">
                         <a href="{{ route('lloguers.edit', $llog->id)}}" class="btn btn-success btn-sm">Edita</a>
+                    </td>
+                    <td class="text-left">
                         <form action="{{ route('lloguers.destroy', $llog->id)}}" method="post" style="display: inline-block">
                             @csrf
                             @method('DELETE')
                             <button class="btn btn-danger btn-sm" type="submit">Esborra</button>
                         </form>
+                    </td>
+                    <td>
+                        <a href="{{ url('lloguerspdf', $llog->Dni)}}" class="btn btn-primary btn-sm">Baixa</a>
                     </td>
                 </tr>
             @endforeach
@@ -55,4 +60,5 @@
         </table>
         <div>
             <br><a href="{{ url('lloguers/create') }}">Accés directe a la vista de creació de lloguers</a>
+            <br><a href="{{ url('/') }}">Accés directe al menú</a>
 @endsection

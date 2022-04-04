@@ -46,6 +46,7 @@
                             @method('DELETE')
                             <button class="btn btn-danger btn-sm" type="submit">Esborra</button>
                         </form>
+                        <a href="{{ route('clients.show', $cli->id)}}" class="btn btn-primary btn-sm">Baixa</a>
                     </td>
                 </tr>
             @endforeach
@@ -53,4 +54,5 @@
         </table>
         <div>
             <br><a href="{{ url('clients/create') }}">Accés directe a la vista de creació de clients</a>
+            <br><a href="{{ url('/') }}">Accés directe al menú</a>
 @endsection

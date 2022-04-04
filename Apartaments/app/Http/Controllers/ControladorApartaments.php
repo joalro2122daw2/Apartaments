@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Apartaments;
+use PDF;
+use Illuminate\Support\Facades\DB;
 
 class ControladorApartaments extends Controller
 {
@@ -64,9 +66,11 @@ return redirect('/apartaments')->with('completed', 'Apartament creat!');
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show(int $id)
+    public function show(int $apart)
     {
-        //
+        $apartament = DB::table('apartaments')->where('id', $apart)->first();
+        $pdf = PDF::loadView('apartamentspdf', array('apart' =>$apartament))->setPaper('a4', 'landscape');
+        return $pdf->download('apartaments.pdf');
     }
 
     /**
@@ -123,4 +127,5 @@ return redirect('/apartaments')->with('completed', 'Apartament creat!');
         return redirect('/apartaments')->with('completed', 'Apartament esborrat');
 
     }
+        
 }

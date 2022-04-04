@@ -33,7 +33,7 @@
                     <input type="text" class="form-control" name="Nomcognoms"/>
                 </div>
                 <div class="form-group">
-                    <label for="Edat">Ciutat</label>
+                    <label for="Edat">Edat</label>
                     <input type="number" class="form-control" name="Edat"/>
                 </div>
                 <div class="form-group">

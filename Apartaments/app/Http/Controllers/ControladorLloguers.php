@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Lloguers;
+use PDF;
 
 class ControladorLloguers extends Controller
 {
@@ -51,7 +52,7 @@ class ControladorLloguers extends Controller
             'Quantdiposit' => 'required|max:11',
             'Tipusasseguranca' => 'required',
         ]);
-        $lloguer = Clients::create($nouLloguer);
+        $lloguer = Lloguers::create($nouLloguer);
 
         return redirect('/lloguers')->with('completed', 'Lloguer creat!');
     }
@@ -118,5 +119,24 @@ class ControladorLloguers extends Controller
         $lloguer = Lloguers::findOrFail($id);
         $lloguer->delete();
         return redirect('/lloguers')->with('completed', 'Lloguer esborrat');
+    }
+
+        /**
+     * Remove the specified resource from storage.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function pdf($id){
+        $lloguer = Lloguers::findOrFail($id);
+        
+        if ($lloguer){
+            $Dni = $lloguer->$Dni;
+            $pdf = PDF::loadView('lloguerspdf', compact('Dni'));
+            return $pdf->setPaper('a4', 'landscape')->download('indexLloguer.pdf');
+        }
+        
+        $pdf = PDF::loadView('lloguerspdf', compact('lloguer'));
+        return $pdf->download('indexLloguer.pdf');
     }
 }

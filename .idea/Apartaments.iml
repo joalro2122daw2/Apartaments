@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="WEB_MODULE" version="4">
+  <component name="NewModuleRootManager">
+    <content url="file://$MODULE_DIR$">
+      <sourceFolder url="file://$MODULE_DIR$/Apartaments/app" isTestSource="false" packagePrefix="App\" />
+      <sourceFolder url="file://$MODULE_DIR$/Apartaments/database/factories" isTestSource="false" packagePrefix="Database\Factories\" />
+      <sourceFolder url="file://$MODULE_DIR$/Apartaments/database/seeders" isTestSource="false" packagePrefix="Database\Seeders\" />
+      <sourceFolder url="file://$MODULE_DIR$/Apartaments/tests" isTestSource="true" packagePrefix="Tests\" />
+      <sourceFolder url="file://$MODULE_DIR$/spec" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/tests" isTestSource="true" />
+      <excludeFolder url="file://$MODULE_DIR$/Apartaments/vendor/symfony/error-handler" />
+      <excludeFolder url="file://$MODULE_DIR$/Apartaments/vendor/ralouphie/getallheaders" />
+      <excludeFolder url="file://$MODULE_DIR$/Apartaments/vendor/psr/container" />
+      <excludeFolder url="file://$MODULE_DIR$/Apartaments/vendor/psr/http-factory" />
+      <excludeFolder url="file://$MODULE_DIR$/Apartaments/vendor/psr/http-client" />
+      <excludeFolder url="file://$MODULE_DIR$/Apartaments/vendor/psr/http-message" />
+      <excludeFolder url="file://$MODULE_DIR$/Apartaments/vendor/psr/event-dispatcher" />
+      <excludeFolder url="file://$MODULE_DIR$/Apartaments/vendor/filp/whoops" />
+      <excludeFolder url="file://$MODULE_DIR$/Apartaments/vendor/psr/log" />
+      <excludeFolder url="file://$MODULE_DIR$/Apartaments/vendor/sebastian/global-state" />
+      <excludeFolder url="file://$MODULE_DIR$/Apartaments/vendor/psr/simple-cache" />
+      <excludeFolder url="file://$MODULE_DIR$/Apartaments/vendor/sebastian/complexity" />
+      <excludeFolder url="file://$MODULE_DIR$/Apartaments/vendor/sebastian/recursion-context" />
+      <excludeFolder url="file://$MODULE_DIR$/Apartaments/vendor/sebastian/object-enumerator" />
+      <excludeFolder url="file://$MODULE_DIR$/Apartaments/vendor/guzzlehttp/guzzle" />
+      <excludeFolder url="file://$MODULE_DIR$/Apartaments/vendor/sebastian/object-reflector" />
+      <excludeFolder url="file://$MODULE_DIR$/Apartaments/vendor/guzzlehttp/psr7" />
+      <excludeFolder url="file://$MODULE_DIR$/Apartaments/vendor/sebastian/cli-parser" />
+      <excludeFolder url="file://$MODULE_DIR$/Apartaments/vendor/guzzlehttp/promises" />
+      <excludeFolder url="file://$MODULE_DIR$/Apartaments/vendor/sebastian/diff" />
+      <excludeFolder url="file://$MODULE_DIR$/Apartaments/vendor/sebastian/lines-of-code" />
+      <excludeFolder url="file://$MODULE_DIR$/Apartaments/vendor/sebastian/type" />
+      <excludeFolder url="file://$MODULE_DIR$/Apartaments/vendor/sebastian/version" />
+      <excludeFolder url="file://$MODULE_DIR$/Apartaments/vendor/sebastian/comparator" />
+      <excludeFolder url="file://$MODULE_DIR$/Apartaments/vendor/sebastian/exporter" />
+      <excludeFolder url="file://$MODULE_DIR$/Apartaments/vendor/sebastian/environment" />
+      <excludeFolder url="file://$MODULE_DIR$/Apartaments/vendor/sebastian/code-unit" />
+      <excludeFolder url="file://$MODULE_DIR$/Apartaments/vendor/sebastian/resource-operations" />
+      <excludeFolder url="file://$MODULE_DIR$/Apartaments/vendor/sebastian/code-unit-reverse-lookup" />
+      <excludeFolder url="file://$MODULE_DIR$/Apartaments/vendor/graham-campbell/result-type" />
+      <excludeFolder url="file://$MODULE_DIR$/Apartaments/vendor/ramsey/collection" />
+      <excludeFolder url="file://$MODULE_DIR$/Apartaments/vendor/ramsey/uuid" />
+      <excludeFolder url="file://$MODULE_DIR$/Apartaments/vendor/asm89/stack-cors" />
+      <excludeFolder url="file://$MODULE_DIR$/Apartaments/vendor/brick/math" />
+      <excludeFolder url="file://$MODULE_DIR$/Apartaments/vendor/league/flysystem" />
+      <excludeFolder url="file://$MODULE_DIR$/Apartaments/vendor/league/mime-type-detection" />
+      <excludeFolder url="file://$MODULE_DIR$/Apartaments/vendor/hamcrest/hamcrest-php" />
+      <excludeFolder url="file://$MODULE_DIR$/Apartaments/vendor/opis/closure" />
+      <excludeFolder url="file://$MODULE_DIR$/Apartaments/vendor/laravel/tinker" />
+      <excludeFolder url="file://$MODULE_DIR$/Apartaments/vendor/laravel/framework" />
+      <excludeFolder url="file://$MODULE_DIR$/Apartaments/vendor/laravel/sanctum" />
+      <excludeFolder url="file://$MODULE_DIR$/Apartaments/vendor/laravel/serializable-closure" />
+      <excludeFolder url="file://$MODULE_DIR$/Apartaments/vendor/voku/portable-ascii" />
+      <excludeFolder url="file://$MODULE_DIR$/Apartaments/vendor/mockery/mockery" />
+      <excludeFolder url="file://$MODULE_DIR$/Apartaments/vendor/facade/ignition-contracts" />
+      <excludeFolder url="file://$MODULE_DIR$/Apartaments/vendor/facade/flare-client-php" />
+      <excludeFolder url="file://$MODULE_DIR$/Apartaments/vendor/facade/ignition" />
+      <excludeFolder url="file://$MODULE_DIR$/Apartaments/vendor/phpunit/php-file-iterator" />
+      <excludeFolder url="file://$MODULE_DIR$/Apartaments/vendor/phpunit/php-timer" />
+      <excludeFolder url="file://$MODULE_DIR$/Apartaments/vendor/phpunit/php-text-template" />
+      <excludeFolder url="file://$MODULE_DIR$/Apartaments/vendor/myclabs/deep-copy" />
+      <excludeFolder url="file://$MODULE_DIR$/Apartaments/vendor/phpunit/php-invoker" />
+      <excludeFolder url="file://$MODULE_DIR$/Apartaments/vendor/phpunit/php-code-coverage" />
+      <excludeFolder url="file://$MODULE_DIR$/Apartaments/vendor/theseer/tokenizer" />
+      <excludeFolder url="file://$MODULE_DIR$/Apartaments/vendor/nunomaduro/collision" />
+      <excludeFolder url="file://$MODULE_DIR$/Apartaments/vendor/tijsverkoyen/css-to-inline-styles" />
+      <excludeFolder url="file://$MODULE_DIR$/Apartaments/vendor/doctrine/instantiator" />
+      <excludeFolder url="file://$MODULE_DIR$/Apartaments/vendor/doctrine/inflector" />
+      <excludeFolder url="file://$MODULE_DIR$/Apartaments/vendor/dragonmantank/cron-expression" />
+      <excludeFolder url="file://$MODULE_DIR$/Apartaments/vendor/doctrine/lexer" />
+      <excludeFolder url="file://$MODULE_DIR$/Apartaments/vendor/phar-io/manifest" />
+      <excludeFolder url="file://$MODULE_DIR$/Apartaments/vendor/phar-io/version" />
+      <excludeFolder url="file://$MODULE_DIR$/Apartaments/vendor/phpdocumentor/reflection-docblock" />
+      <excludeFolder url="file://$MODULE_DIR$/Apartaments/vendor/phpdocumentor/type-resolver" />
+      <excludeFolder url="file://$MODULE_DIR$/Apartaments/vendor/phpdocumentor/reflection-common" />
+      <excludeFolder url="file://$MODULE_DIR$/Apartaments/vendor/swiftmailer/swiftmailer" />
+      <excludeFolder url="file://$MODULE_DIR$/Apartaments/vendor/symfony/deprecation-contracts" />
+      <excludeFolder url="file://$MODULE_DIR$/Apartaments/vendor/symfony/string" />
+      <excludeFolder url="file://$MODULE_DIR$/Apartaments/vendor/symfony/service-contracts" />
+      <excludeFolder url="file://$MODULE_DIR$/Apartaments/vendor/symfony/mime" />
+      <excludeFolder url="file://$MODULE_DIR$/Apartaments/vendor/symfony/polyfill-iconv" />
+      <excludeFolder url="file://$MODULE_DIR$/Apartaments/vendor/vlucas/phpdotenv" />
+      <excludeFolder url="file://$MODULE_DIR$/Apartaments/vendor/symfony/polyfill-intl-idn" />
+      <excludeFolder url="file://$MODULE_DIR$/Apartaments/vendor/symfony/polyfill-php80" />
+      <excludeFolder url="file://$MODULE_DIR$/Apartaments/vendor/symfony/polyfill-php81" />
+      <excludeFolder url="file://$MODULE_DIR$/Apartaments/vendor/symfony/routing" />
+      <excludeFolder url="file://$MODULE_DIR$/Apartaments/vendor/symfony/css-selector" />
+      <excludeFolder url="file://$MODULE_DIR$/Apartaments/vendor/symfony/event-dispatcher" />
+      <excludeFolder url="file://$MODULE_DIR$/Apartaments/vendor/symfony/polyfill-ctype" />
+      <excludeFolder url="file://$MODULE_DIR$/Apartaments/vendor/symfony/event-dispatcher-contracts" />
+      <excludeFolder url="file://$MODULE_DIR$/Apartaments/vendor/composer" />
+      <excludeFolder url="file://$MODULE_DIR$/Apartaments/vendor/symfony/polyfill-intl-grapheme" />
+      <excludeFolder url="file://$MODULE_DIR$/Apartaments/vendor/symfony/console" />
+      <excludeFolder url="file://$MODULE_DIR$/Apartaments/vendor/symfony/process" />
+      <excludeFolder url="file://$MODULE_DIR$/Apartaments/vendor/symfony/polyfill-php72" />
+      <excludeFolder url="file://$MODULE_DIR$/Apartaments/vendor/symfony/polyfill-intl-normalizer" />
+      <excludeFolder url="file://$MODULE_DIR$/Apartaments/vendor/symfony/polyfill-php73" />
+      <excludeFolder url="file://$MODULE_DIR$/Apartaments/vendor/symfony/http-kernel" />
+      <excludeFolder url="file://$MODULE_DIR$/Apartaments/vendor/symfony/finder" />
+      <excludeFolder url="file://$MODULE_DIR$/Apartaments/vendor/symfony/translation" />
+      <excludeFolder url="file://$MODULE_DIR$/Apartaments/vendor/symfony/polyfill-mbstring" />
+      <excludeFolder url="file://$MODULE_DIR$/Apartaments/vendor/symfony/translation-contracts" />
+      <excludeFolder url="file://$MODULE_DIR$/Apartaments/vendor/symfony/http-foundation" />
+      <excludeFolder url="file://$MODULE_DIR$/Apartaments/vendor/fakerphp/faker" />
+      <excludeFolder url="file://$MODULE_DIR$/Apartaments/vendor/laravel/sail" />
+      <excludeFolder url="file://$MODULE_DIR$/Apartaments/vendor/psy/psysh" />
+      <excludeFolder url="file://$MODULE_DIR$/Apartaments/vendor/fruitcake/laravel-cors" />
+      <excludeFolder url="file://$MODULE_DIR$/Apartaments/vendor/monolog/monolog" />
+      <excludeFolder url="file://$MODULE_DIR$/Apartaments/vendor/nesbot/carbon" />
+      <excludeFolder url="file://$MODULE_DIR$/Apartaments/vendor/phpunit/phpunit" />
+      <excludeFolder url="file://$MODULE_DIR$/Apartaments/vendor/nikic/php-parser" />
+      <excludeFolder url="file://$MODULE_DIR$/Apartaments/vendor/phpspec/prophecy" />
+      <excludeFolder url="file://$MODULE_DIR$/Apartaments/vendor/league/commonmark" />
+      <excludeFolder url="file://$MODULE_DIR$/Apartaments/vendor/phpoption/phpoption" />
+      <excludeFolder url="file://$MODULE_DIR$/Apartaments/vendor/symfony/var-dumper" />
+      <excludeFolder url="file://$MODULE_DIR$/Apartaments/vendor/webmozart/assert" />
+      <excludeFolder url="file://$MODULE_DIR$/Apartaments/vendor/egulias/email-validator" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+  </component>
+</module>
