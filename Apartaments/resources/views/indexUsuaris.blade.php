@@ -46,5 +46,5 @@
         </table>
         <div>
             <br><a href="{{ url('usuaris/create') }}">Accés directe a la vista de creació d'usuaris</a>
-            <br><a href="{{ url('/') }}">Accés directe al menú</a>
+            <br><a href="{{ url('/menu') }}">Accés directe al menú</a>
 @endsection

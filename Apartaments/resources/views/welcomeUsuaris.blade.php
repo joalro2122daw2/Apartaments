@@ -30,7 +30,7 @@
                 </div>
                 <div class="form-group">
                     <label for="Contrasenya">Contrasenya</label>
-                    <input type="password" class="form-control" name="Contrasenya"/>
+                    <input type="password" class="form-control" name="Contrasenya" /> <!--pattern="(?=.\d)(?=.[a-z])(?=.*[A-Z]).{8,}"-->
                 </div>
                 <div class="form-group">
                     <label for="Tipus">Tipus d'empleat</label>
