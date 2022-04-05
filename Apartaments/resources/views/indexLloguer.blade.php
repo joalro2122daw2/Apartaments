@@ -52,7 +52,7 @@
                         </form>
                     </td>
                     <td>
-                        <a href="{{ url('lloguerspdf', $llog->Dni)}}" class="btn btn-primary btn-sm">Baixa</a>
+                    <a href="{{ route('lloguers.show', $llog->Dni)}}" class="btn btn-primary btn-sm">Baixa</a>
                     </td>
                 </tr>
             @endforeach

@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Lloguers;
 use PDF;
+use Illuminate\Support\Facades\DB;
 
 class ControladorLloguers extends Controller
 {
@@ -63,9 +64,11 @@ class ControladorLloguers extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show($llog)
     {
-        //
+        $lloguer = DB::table('lloguers')->where('Dni', $llog)->first();
+        $pdf = PDF::loadView('lloguerspdf', array('llog' =>$lloguer))->setPaper('a3', 'landscape');
+        return $pdf->download('lloguers.pdf');
     }
 
     /**

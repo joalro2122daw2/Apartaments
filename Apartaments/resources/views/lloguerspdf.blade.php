@@ -2,16 +2,6 @@
 
 @section('content')
 
-<?php
-
-use App\Models\Lloguers;
-
-$llog = Lloguers::where('Dni', $Dni)->first();
-$dades = unserialize($llog->dades_lloguer);
-
-?>
-
-    <h1>Llista de lloguers</h1>
     <div class="mt-5">
         @if(session()->get('success'))
             <div class="alert alert-success">
@@ -21,7 +11,7 @@ $dades = unserialize($llog->dades_lloguer);
         <table class="table">
             <thead>
             <tr class="table-primary">
-                <td>Dni</td>
+                <td># Dni</td>
                 <td>id</td>
                 <td>Data inici</td>
                 <td>Hora inici</td>
@@ -52,5 +42,5 @@ $dades = unserialize($llog->dades_lloguer);
                 </tr>
             </tbody>
         </table>
-    <div>
+        <div>
 @endsection

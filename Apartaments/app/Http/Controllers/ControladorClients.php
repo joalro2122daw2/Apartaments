@@ -67,7 +67,7 @@ class ControladorClients extends Controller
     {
         $client = DB::table('clients')->where('id', $cli)->first();
         $pdf = PDF::loadView('clientspdf', array('cli' =>$client))->setPaper('a4', 'landscape');
-        return $pdf->download('clients.pdf');
+        return $pdf->download('client.pdf');
     }
 
     /**

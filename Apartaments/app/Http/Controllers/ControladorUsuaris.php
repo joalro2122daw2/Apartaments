@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Usuaris;
+use PDF;
+use Illuminate\Support\Facades\DB;
 
 class ControladorUsuaris extends Controller
 {
@@ -55,9 +57,11 @@ class ControladorUsuaris extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show($usu)
     {
-        //
+        $usuari = DB::table('usuaris')->where('id', $usu)->first();
+        $pdf = PDF::loadView('usuarispdf', array('usu' =>$usuari))->setPaper('a4', 'landscape');
+        return $pdf->download('usuari.pdf');
     }
 
     /**
